@@ -158,7 +158,21 @@ async def main():
     chat_key = parse_chat(CHAT_RAW)
 
     client = TelegramClient(StringSession(SESSION), API_ID, API_HASH)
-    await client.start()
+    await client.connect()
+
+    if not await client.is_user_authorized():
+        print("=" * 64)
+        print("ERROR: la session string no es valida o ha sido revocada.")
+        print()
+        print("Genera una nueva con get_session.py y actualiza el secret")
+        print("TG_SESSION en GitHub. Comprueba tambien que la pegaste entera,")
+        print("sin espacios ni saltos de linea al principio o al final.")
+        print()
+        print("Y en Telegram: Ajustes -> Dispositivos. NO cierres la sesion")
+        print("que aparezca como desconocida: esa es la de GitHub.")
+        print("=" * 64)
+        await client.disconnect()
+        sys.exit(1)
 
     me = await client.get_me()
     print(f"Conectado como {me.first_name} (id {me.id})")
