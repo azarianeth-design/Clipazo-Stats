@@ -1,13 +1,13 @@
 {
   "grupo": "los secretos de azarian 💰",
-  "actualizado": "2026-08-20T02:24:10.542319+00:00",
-  "total_altas": 210,
-  "total_enlaces": 7,
+  "actualizado": "2026-08-20T15:02:19.429980+00:00",
+  "total_altas": 217,
+  "total_enlaces": 8,
   "enlaces": [
     {
       "titulo": "AzarianIG",
       "enlace": "t.me/+...xNjk0",
-      "altas": 129,
+      "altas": 128,
       "ultima_alta": null,
       "creado": "2026-07-10T03:23:00+00:00",
       "limite": null,
@@ -17,7 +17,7 @@
     {
       "titulo": "Azarian tik tok",
       "enlace": "t.me/+...zYzE0",
-      "altas": 53,
+      "altas": 58,
       "ultima_alta": null,
       "creado": "2026-07-10T02:42:35+00:00",
       "limite": null,
@@ -27,29 +27,19 @@
     {
       "titulo": "Azarian FB",
       "enlace": "t.me/+...0MGY0",
-      "altas": 15,
+      "altas": 22,
       "ultima_alta": null,
       "creado": "2026-07-10T16:20:57+00:00",
-      "limite": null,
-      "pendientes": 2,
-      "revocado": false
-    },
-    {
-      "titulo": "Pichardo",
-      "enlace": "t.me/+...xYTk8",
-      "altas": 8,
-      "ultima_alta": null,
-      "creado": "2026-07-13T02:36:35+00:00",
       "limite": null,
       "pendientes": 0,
       "revocado": false
     },
     {
-      "titulo": "(sin nombre)",
-      "enlace": "t.me/+...4NTU0",
-      "altas": 4,
+      "titulo": "Azarian.eth__marcapersonal",
+      "enlace": "t.me/+...xYTk8",
+      "altas": 8,
       "ultima_alta": null,
-      "creado": "2026-03-27T23:56:57+00:00",
+      "creado": "2026-07-13T02:36:35+00:00",
       "limite": null,
       "pendientes": 0,
       "revocado": false
@@ -70,6 +60,26 @@
       "altas": 0,
       "ultima_alta": null,
       "creado": "2026-08-13T15:58:21+00:00",
+      "limite": null,
+      "pendientes": 0,
+      "revocado": false
+    },
+    {
+      "titulo": "(sin nombre)",
+      "enlace": "t.me/+...wZGFk",
+      "altas": 0,
+      "ultima_alta": null,
+      "creado": "2026-08-20T02:35:58+00:00",
+      "limite": null,
+      "pendientes": 0,
+      "revocado": false
+    },
+    {
+      "titulo": "mainsextosentido",
+      "enlace": "t.me/+...yNzY0",
+      "altas": 0,
+      "ultima_alta": null,
+      "creado": "2026-08-20T02:40:59+00:00",
       "limite": null,
       "pendientes": 0,
       "revocado": false
