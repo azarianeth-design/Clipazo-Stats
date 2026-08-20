@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClipAzo · Ranking de clippers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,600;0,700;0,900;1,900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#000000;
+    --panel:#0B0B10;
+    --panel-2:#12121A;
+    --line:#1E1E2B;
+    --violet:#9C4AF7;
+    --violet-mid:#8B3FF0;
+    --violet-deep:#722DD0;
+    --text:#F2F2F7;
+    --muted:#8A8A9C;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Archivo',system-ui,-apple-system,'Segoe UI',sans-serif;
+    min-height:100vh;
+    padding:32px 20px 64px;
+    background-image:
+      radial-gradient(900px 420px at 50% -120px, rgba(156,74,247,.20), transparent 70%),
+      linear-gradient(rgba(255,255,255,.020) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.020) 1px, transparent 1px);
+    background-size:auto, 44px 44px, 44px 44px;
+  }
+  .wrap{max-width:940px;margin:0 auto}
+
+  header{text-align:center;margin-bottom:36px}
+  .brand{
+    font-style:italic;font-weight:900;
+    font-size:clamp(38px,8vw,68px);
+    letter-spacing:-.03em;line-height:.95;
+  }
+  .brand span{
+    background:linear-gradient(180deg,var(--violet),var(--violet-deep));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .sub{
+    margin-top:10px;color:var(--muted);
+    font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;
+  }
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:22px}
+  @media(max-width:620px){.stats{grid-template-columns:1fr;gap:10px}}
+  .stat{
+    background:var(--panel);border:1px solid var(--line);
+    border-radius:16px;padding:18px 20px;
+  }
+  .stat b{display:block;font-size:34px;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+  .stat small{color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+  .stat.hero b{color:var(--violet)}
+
+  .toolbar{display:flex;gap:10px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+  input[type=search]{
+    flex:1;min-width:200px;
+    background:var(--panel);border:1px solid var(--line);border-radius:12px;
+    padding:12px 16px;color:var(--text);font-family:inherit;font-size:14px;
+  }
+  input[type=search]:focus{outline:none;border-color:var(--violet-deep)}
+  .stamp{color:var(--muted);font-size:12px}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+  table{width:100%;border-collapse:collapse}
+  th{
+    text-align:left;padding:14px 18px;font-size:11px;font-weight:700;
+    letter-spacing:.16em;text-transform:uppercase;color:var(--muted);
+    background:var(--panel-2);border-bottom:1px solid var(--line);
+  }
+  td{padding:15px 18px;border-bottom:1px solid var(--line);font-size:15px;vertical-align:middle}
+  tr:last-child td{border-bottom:none}
+  tr.row:hover td{background:rgba(156,74,247,.06)}
+
+  .pos{width:54px;font-weight:900;color:var(--muted);font-size:15px}
+  .pos.top{color:var(--violet)}
+  .name{font-weight:700}
+  .link{display:block;color:var(--muted);font-size:12px;margin-top:3px;font-weight:400}
+  .num{text-align:right;font-weight:900;font-size:22px;letter-spacing:-.02em;width:110px}
+  .num.top{color:var(--violet)}
+  .when{text-align:right;color:var(--muted);font-size:12px;width:130px}
+  @media(max-width:620px){
+    .when,th.when{display:none}
+    td{padding:13px 12px}
+    .num{font-size:18px;width:80px}
+  }
+
+  .msg{padding:40px 24px;text-align:center;color:var(--muted);font-size:14px;line-height:1.7}
+  .msg code{color:var(--violet);font-family:ui-monospace,monospace;font-size:13px}
+  footer{margin-top:26px;text-align:center;color:var(--muted);font-size:12px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="brand">Clip<span>Azo</span></div>
+    <div class="sub">Ranking de clippers</div>
+  </header>
+
+  <div class="stats">
+    <div class="stat hero"><b id="s-total">—</b><small>Altas totales</small></div>
+    <div class="stat"><b id="s-links">—</b><small>Enlaces activos</small></div>
+    <div class="stat"><b id="s-top">—</b><small>Mejor clipper</small></div>
+  </div>
+
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="Buscar clipper...">
+    <span class="stamp" id="stamp"></span>
+  </div>
+
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th class="pos">#</th>
+          <th>Clipper</th>
+          <th style="text-align:right">Altas</th>
+          <th class="when" style="text-align:right">Última</th>
+        </tr>
+      </thead>
+      <tbody id="tbody">
+        <tr><td colspan="4"><div class="msg">Cargando datos…</div></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>Los datos se actualizan solos cada 15 minutos.</footer>
+</div>
+
+<script>
+let DATOS = null;
+
+const fmt = n => new Intl.NumberFormat('es-ES').format(n);
+
+function haceCuanto(iso){
+  if(!iso) return '—';
+  const d = new Date(iso), min = Math.floor((Date.now() - d) / 60000);
+  if(min < 1)    return 'ahora';
+  if(min < 60)   return `hace ${min} min`;
+  const h = Math.floor(min / 60);
+  if(h < 24)     return `hace ${h} h`;
+  const dias = Math.floor(h / 24);
+  if(dias < 30)  return `hace ${dias} d`;
+  return d.toLocaleDateString('es-ES', {day:'numeric', month:'short'});
+}
+
+function pintar(){
+  if(!DATOS) return;
+  const filtro = document.getElementById('q').value.trim().toLowerCase();
+  const lista  = DATOS.enlaces.filter(e => !filtro || e.titulo.toLowerCase().includes(filtro));
+  const tbody  = document.getElementById('tbody');
+
+  document.getElementById('s-total').textContent = fmt(DATOS.total_altas);
+  document.getElementById('s-links').textContent = fmt(DATOS.total_enlaces);
+  document.getElementById('s-top').textContent   = DATOS.enlaces.length ? DATOS.enlaces[0].titulo : '—';
+  document.getElementById('s-top').style.fontSize = '22px';
+  document.getElementById('stamp').textContent   = 'Actualizado ' + haceCuanto(DATOS.actualizado);
+
+  if(!lista.length){
+    tbody.innerHTML = '<tr><td colspan="4"><div class="msg">Ningún clipper con ese nombre.</div></td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = lista.map(e => {
+    const puesto = DATOS.enlaces.indexOf(e) + 1;
+    const top    = puesto <= 3 ? ' top' : '';
+    return `<tr class="row">
+      <td class="pos${top}">${puesto}</td>
+      <td><div class="name">${e.titulo}</div><span class="link">${e.enlace}</span></td>
+      <td class="num${top}">${fmt(e.altas)}</td>
+      <td class="when">${haceCuanto(e.ultima_alta)}</td>
+    </tr>`;
+  }).join('');
+}
+
+async function cargar(){
+  try{
+    const r = await fetch('data.json?v=' + Date.now(), {cache:'no-store'});
+    if(!r.ok) throw new Error(r.status);
+    DATOS = await r.json();
+    pintar();
+  }catch(err){
+    document.getElementById('tbody').innerHTML =
+      `<tr><td colspan="4"><div class="msg">
+        Todavía no hay <code>data.json</code>.<br>
+        Lanza el workflow desde la pestaña <b>Actions</b> de GitHub y recarga esta página.
+      </div></td></tr>`;
+  }
+}
+
+document.getElementById('q').addEventListener('input', pintar);
+cargar();
+setInterval(cargar, 5 * 60 * 1000);
+</script>
+</body>
+</html>
