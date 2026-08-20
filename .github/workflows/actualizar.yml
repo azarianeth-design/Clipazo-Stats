@@ -1,0 +1,46 @@
+name: Actualizar datos de ClipAzo
+
+on:
+  schedule:
+    # cada 15 minutos, en minutos raros para no coincidir con medio GitHub
+    - cron: "7,22,37,52 * * * *"
+  workflow_dispatch: # boton para lanzarlo a mano desde la pestana Actions
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualizar-datos
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Leer enlaces de Telegram
+        env:
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_SESSION: ${{ secrets.TG_SESSION }}
+          TG_CHAT: ${{ secrets.TG_CHAT }}
+          MASK_LINKS: "1"
+          FETCH_DETAILS: "0"
+        run: python fetch_links.py
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "clipazo-stats"
+          git config user.email "actions@github.com"
+          git add data.json
+          git diff --staged --quiet || git commit -m "datos $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
