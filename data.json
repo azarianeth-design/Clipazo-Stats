@@ -1,8 +1,8 @@
 {
   "grupo": "los secretos de azarian 💰",
-  "actualizado": "2026-08-20T17:15:55.341945+00:00",
-  "total_altas": 217,
-  "total_enlaces": 8,
+  "actualizado": "2026-08-20T19:18:50.539736+00:00",
+  "total_altas": 221,
+  "total_enlaces": 9,
   "enlaces": [
     {
       "titulo": "AzarianIG",
@@ -17,11 +17,11 @@
     {
       "titulo": "Azarian tik tok",
       "enlace": "t.me/+...zYzE0",
-      "altas": 58,
+      "altas": 62,
       "ultima_alta": null,
       "creado": "2026-07-10T02:42:35+00:00",
       "limite": null,
-      "pendientes": 3,
+      "pendientes": 1,
       "revocado": false
     },
     {
@@ -50,6 +50,16 @@
       "altas": 1,
       "ultima_alta": null,
       "creado": "2026-08-14T13:15:04+00:00",
+      "limite": null,
+      "pendientes": 0,
+      "revocado": false
+    },
+    {
+      "titulo": "(sin nombre)",
+      "enlace": "t.me/+...1YmM8",
+      "altas": 0,
+      "ultima_alta": null,
+      "creado": "2026-08-20T18:39:14+00:00",
       "limite": null,
       "pendientes": 0,
       "revocado": false
