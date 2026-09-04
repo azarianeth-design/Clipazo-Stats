@@ -1,7 +1,7 @@
 {
   "grupo": "los secretos de azarian 💰",
-  "actualizado": "2026-09-04T09:34:03.080866+00:00",
-  "total_altas": 301,
+  "actualizado": "2026-09-04T09:47:23.955187+00:00",
+  "total_altas": 322,
   "total_enlaces": 9,
   "enlaces": [
     {
@@ -15,33 +15,33 @@
       "revocado": false
     },
     {
-      "titulo": "Azarian tik tok",
-      "enlace": "t.me/+...zYzE0",
-      "altas": 81,
-      "ultima_alta": null,
-      "creado": "2026-07-10T02:42:35+00:00",
-      "limite": null,
-      "pendientes": 2,
-      "revocado": false
-    },
-    {
       "titulo": "Azarian FB",
       "enlace": "t.me/+...0MGY0",
-      "altas": 72,
+      "altas": 90,
       "ultima_alta": null,
       "creado": "2026-07-10T16:20:57+00:00",
       "limite": null,
-      "pendientes": 18,
+      "pendientes": 0,
+      "revocado": false
+    },
+    {
+      "titulo": "Azarian tik tok",
+      "enlace": "t.me/+...zYzE0",
+      "altas": 83,
+      "ultima_alta": null,
+      "creado": "2026-07-10T02:42:35+00:00",
+      "limite": null,
+      "pendientes": 0,
       "revocado": false
     },
     {
       "titulo": "Azarian.eth__marcapersonal",
       "enlace": "t.me/+...xYTk8",
-      "altas": 18,
+      "altas": 19,
       "ultima_alta": null,
       "creado": "2026-07-13T02:36:35+00:00",
       "limite": null,
-      "pendientes": 1,
+      "pendientes": 0,
       "revocado": false
     },
     {
