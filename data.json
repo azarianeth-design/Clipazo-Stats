@@ -1,7 +1,7 @@
 {
   "grupo": "los secretos de azarian 💰",
-  "actualizado": "2026-09-04T15:56:41.734190+00:00",
-  "total_altas": 322,
+  "actualizado": "2026-09-04T16:20:21.758204+00:00",
+  "total_altas": 324,
   "total_enlaces": 9,
   "enlaces": [
     {
@@ -17,11 +17,11 @@
     {
       "titulo": "Azarian FB",
       "enlace": "t.me/+...0MGY0",
-      "altas": 90,
+      "altas": 92,
       "ultima_alta": null,
       "creado": "2026-07-10T16:20:57+00:00",
       "limite": null,
-      "pendientes": 2,
+      "pendientes": 0,
       "revocado": false
     },
     {
