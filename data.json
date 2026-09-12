@@ -1,6 +1,6 @@
 {
   "grupo": "los secretos de azarian 💰",
-  "actualizado": "2026-09-12T21:43:16.850530+00:00",
+  "actualizado": "2026-09-12T21:56:30.341212+00:00",
   "total_altas": 452,
   "total_enlaces": 10,
   "enlaces": [
@@ -11,7 +11,7 @@
       "ultima_alta": null,
       "creado": "2026-07-10T03:23:00+00:00",
       "limite": null,
-      "pendientes": 0,
+      "pendientes": 1,
       "revocado": false
     },
     {
@@ -21,7 +21,7 @@
       "ultima_alta": null,
       "creado": "2026-07-10T02:42:35+00:00",
       "limite": null,
-      "pendientes": 0,
+      "pendientes": 1,
       "revocado": false
     },
     {
