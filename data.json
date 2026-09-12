@@ -1,8 +1,8 @@
 {
   "grupo": "los secretos de azarian 💰",
-  "actualizado": "2026-09-12T10:30:51.815541+00:00",
+  "actualizado": "2026-09-12T10:43:25.949018+00:00",
   "total_altas": 443,
-  "total_enlaces": 9,
+  "total_enlaces": 10,
   "enlaces": [
     {
       "titulo": "AzarianIG",
@@ -80,6 +80,16 @@
       "altas": 0,
       "ultima_alta": null,
       "creado": "2026-08-20T02:35:58+00:00",
+      "limite": null,
+      "pendientes": 0,
+      "revocado": false
+    },
+    {
+      "titulo": "Azarianmentor",
+      "enlace": "t.me/+...lZWU0",
+      "altas": 0,
+      "ultima_alta": null,
+      "creado": "2026-09-12T10:39:06+00:00",
       "limite": null,
       "pendientes": 0,
       "revocado": false
