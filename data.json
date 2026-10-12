@@ -1,7 +1,7 @@
 {
   "grupo": "los secretos de azarian 💰",
-  "actualizado": "2026-10-12T01:24:37.579882+00:00",
-  "total_altas": 667,
+  "actualizado": "2026-10-12T07:55:52.271911+00:00",
+  "total_altas": 666,
   "total_enlaces": 8,
   "enlaces": [
     {
@@ -11,7 +11,7 @@
       "ultima_alta": null,
       "creado": "2026-07-10T03:23:00+00:00",
       "limite": null,
-      "pendientes": 0,
+      "pendientes": 1,
       "revocado": false
     },
     {
@@ -37,7 +37,7 @@
     {
       "titulo": "Azarian.eth__marcapersonal",
       "enlace": "t.me/+...xYTk8",
-      "altas": 33,
+      "altas": 32,
       "ultima_alta": null,
       "creado": "2026-07-13T02:36:35+00:00",
       "limite": null,
